@@ -14,9 +14,9 @@ Eventrix was created for the CodeChef ABESEC Chapter recruitment task. It gives 
 - Search student registrations
 - Enjoy a responsive layout designed for desktop and mobile
 
-## Demo admin workspace
+## Dedicated demo admin route
 
-The admin area is intentionally a **client-side demo**, not real authentication. Select **Admin demo** in the navigation, then choose **Open demo dashboard**. This lets a reviewer evaluate the requested admin features immediately without an invented username or password.
+The admin workspace is a dedicated `/admin` route and is intentionally a **client-side demo**, not real authentication. Open `/admin` directly, or select **Admin workspace** from the public site navigation. This lets a reviewer evaluate the requested admin features immediately without an invented username or password.
 
 Event and registration changes are stored in the browser with `localStorage`, so they persist on that device until browser storage is cleared. The demo is not intended to protect sensitive data or serve multiple users.
 
