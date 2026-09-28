@@ -2,7 +2,9 @@
 
 > A responsive event-management web application for college clubs.
 
-Eventrix was designed for the **CodeChef ABESEC Chapter Recruitment 2026–27** development task. It gives students an elegant way to discover and register for campus events, while giving organisers a separate, focused workspace to manage events and view registrations.
+Eventrix was designed for the **CodeChef ABESEC Chapter Recruitment 2026–27** development task.
+
+**Live site:** [eventrix.priyanshugupta.com](https://eventrix.priyanshugupta.com/) It gives students an elegant way to discover and register for campus events, while giving organisers a separate, focused workspace to manage events and view registrations.
 
 ## Live routes
 
@@ -80,4 +82,4 @@ npm run build
 ## Submission
 
 - GitHub repository: [priyanshubuild/Eventrix](https://github.com/priyanshubuild/Eventrix)
-- Deployment: add the final Vercel URL here after deployment
+- Live deployment: [eventrix.priyanshugupta.com](https://eventrix.priyanshugupta.com/)
