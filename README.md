@@ -1,30 +1,47 @@
 # Eventrix
 
-> A refined, responsive event-management experience for college clubs.
+> A responsive event-management web application for college clubs.
 
-Eventrix was created for the CodeChef ABESEC Chapter recruitment task. It gives students a clear way to discover club events and register, while offering a polished client-side admin workspace to manage the event calendar and view registrations.
+Eventrix was designed for the **CodeChef ABESEC Chapter Recruitment 2026–27** development task. It gives students an elegant way to discover and register for campus events, while giving organisers a separate, focused workspace to manage events and view registrations.
 
-## Highlights
+## Live routes
 
-- Discover upcoming club events through a focused student experience
-- Search events by title and filter by category
-- Register with name, email, college/year and phone number
-- Explore a clearly labelled demo admin workspace—no credentials required
-- Add, edit and delete events from the admin dashboard
-- Search student registrations
-- Enjoy a responsive layout designed for desktop and mobile
+| Route | Purpose |
+| --- | --- |
+| `/` | Student home page with club introduction, featured event and upcoming-event preview |
+| `/events` | Dedicated event directory with full search, category filtering and registration |
+| `/admin` | Standalone organiser workspace for event and registration management |
 
-## Dedicated demo admin route
+## Features
 
-The admin workspace is a dedicated `/admin` route and is intentionally a **client-side demo**, not real authentication. Open `/admin` directly, or select **Admin workspace** from the public site navigation. This lets a reviewer evaluate the requested admin features immediately without an invented username or password.
+### Student experience
 
-Event and registration changes are stored in the browser with `localStorage`, so they persist on that device until browser storage is cleared. The demo is not intended to protect sensitive data or serve multiple users.
+- Club introduction and campus activity overview
+- Highlighted featured event and curated upcoming-events preview
+- Dedicated event directory with name search and category filters
+- Responsive event cards with date, time, venue, description and registration action
+- Registration form collecting name, email, college/year and phone number
+- Clear confirmation feedback after registration
+
+### Admin workspace
+
+- Separate `/admin` route—not embedded in the public site
+- Create, edit and delete events
+- View all registered students
+- Search registrations and filter them by event
+- Responsive dashboard layout for desktop and mobile
+
+## Important demo note
+
+This project intentionally uses browser `localStorage` for events and registrations. It is a polished recruitment-task demo, so the admin workspace is directly accessible at `/admin` and does **not** claim to provide secure production authentication. Data stays in the current browser until its storage is cleared.
+
+For a real college deployment, the next step would be an authentication provider plus a protected database/API.
 
 ## Tech stack
 
 - React 19
 - Vite 8
-- Plain CSS with a responsive, custom design system
+- Custom responsive CSS
 - Browser `localStorage` for demo persistence
 
 ## Project structure
@@ -32,11 +49,11 @@ Event and registration changes are stored in the browser with `localStorage`, so
 ```text
 Eventrix/
 ├── src/
-│   ├── main.jsx       # Application UI, state, event and registration flows
-│   └── styles.css     # Responsive visual system and component styles
-├── index.html         # Vite HTML entry point
-├── package.json       # Scripts and project dependencies
-├── vercel.json        # Vercel routing configuration
+│   ├── main.jsx       # Routes, UI components and client-side data flows
+│   └── styles.css     # Responsive design system and component styling
+├── index.html         # Vite entry document
+├── package.json       # Application scripts and dependencies
+├── vercel.json        # Rewrite rule for direct route visits
 └── README.md          # Project documentation
 ```
 
@@ -47,23 +64,20 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. To create an optimized production build:
+Create a production build with:
 
 ```bash
 npm run build
 ```
 
-## Deploy to Vercel
+## Deploy on Vercel
 
-1. Import this GitHub repository into Vercel.
-2. Vercel detects Vite automatically. Use `npm run build` and `dist` if values are requested.
-3. Deploy the project.
-4. To use a custom domain, add it under **Project Settings → Domains**, then add Vercel’s displayed CNAME record to your DNS provider.
+1. Import the GitHub repository into Vercel.
+2. Vercel automatically recognises Vite. If asked, use `npm run build` and `dist`.
+3. Deploy. The included `vercel.json` ensures `/events` and `/admin` load correctly on direct visits.
+4. Add your custom domain in **Project Settings → Domains**, then enter the CNAME value Vercel gives you in GoDaddy DNS.
 
-## Production note
+## Submission
 
-For a real college deployment, replace the demo workspace and browser storage with an authentication provider and a protected database/API. This keeps student registration data secure and enables shared administration.
-
-## License
-
-Created for the CodeChef ABESEC recruitment task.
+- GitHub repository: [priyanshubuild/Eventrix](https://github.com/priyanshubuild/Eventrix)
+- Deployment: add the final Vercel URL here after deployment
